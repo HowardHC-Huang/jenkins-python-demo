@@ -21,7 +21,10 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                echo 'Source code checkout completed.'
+                echo 'Checking out source code from GitHub...'
+        
+                checkout scm
+        
                 bat 'dir'
             }
         }
